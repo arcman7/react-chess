@@ -4,7 +4,7 @@ import { Color } from '../../util'
 
 import { selectBoard, selectLayers, displayMovePattern, clearMovePattern, pieceSelected, pieceMoveRequest } from '../game/gameSlice'
 import { selectBoardColors, selectPlayer1Colors, selectPlayer2Colors } from '../settings/settingsSlice'
-import { canMove, pieceTypes } from '../game/gameLogic'
+import { canMove } from '../game/gameLogic'
 
 import { Square } from './Square'
 import { MousePiece } from './MousePiece'
@@ -37,7 +37,7 @@ function isSelected(piece, selected) {
   return piece === selected.piece
 }
 
-export const Board = ({ }) => {
+export const Board = () => {
   const dispatch = useDispatch()
   const [rowEdge, colEdge] = useSelector(state => state.game.dimensions)
   const selected = useSelector(state => state.game.currentAction)

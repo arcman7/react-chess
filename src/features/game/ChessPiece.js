@@ -5,7 +5,6 @@ import { Knight } from './pieces/Knight'
 import { Bishop } from './pieces/Bishop'
 import { Queen } from './pieces/Queen'
 import { King } from './pieces/King'
-
 import { pieceTypes } from './gameLogic'
 
 const [pawn, rook, knight, bishop, queen, king] = pieceTypes

@@ -3,34 +3,6 @@ body {
   margin: 20px;
 }
 
-ol, ul {
-  padding-left: 30px;
-}
-
-
-.status {
-  margin-bottom: 10px;
-}
-
-
-
-.square:focus {
-  outline: none;
-}
-
-.kbd-navigation .square:focus {
-  background: #ddd;
-}
-
-.game {
-  display: flex;
-  flex-direction: row;
-}
-
-.game-info {
-  margin-left: 20px;
-}
-
 .chess-board {
   width: 500px;
   height: 500px;

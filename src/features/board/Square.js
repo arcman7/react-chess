@@ -1,9 +1,8 @@
-import ReactDOM from 'react-dom'
-import { useEffect } from 'react'
 import { ChessPiece } from '../game/ChessPiece'
 import { normal } from 'color-blend/unit'
 import { Color } from '../../util'
-export const Square = ({ color, pieceType, pieceKey, selected, layers, playerColors, onMouseDown, onMouseUp, passedRef }) => {
+
+export const Square = ({ color, pieceType, pieceKey, selected, layers, playerColors, onMouseDown, onMouseUp }) => {
 
   let usedColor = color.toNormal()
   layers.forEach((colorObj) => {
@@ -26,18 +25,6 @@ export const Square = ({ color, pieceType, pieceKey, selected, layers, playerCol
   } else {
     renderedChessPiece = null
   }
-  const container = document.getElementById('mouse-anchor')
-  useEffect(() => {
-    if (selected) {
-      ReactDOM.createPortal(<ChessPiece
-        id={pieceKey}
-        key={pieceKey}
-        pieceType={pieceType}
-        color={playerColors.color1.toString()}
-        stroke={playerColors.color2.toString()}
-      />, container)
-    }
-  }, [selected])
 
   return (
     <div

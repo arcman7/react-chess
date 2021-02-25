@@ -1,5 +1,4 @@
 import { createSlice } from '@reduxjs/toolkit'
-
 import { startingPositions } from './gameLogic'
 import { Color } from '../../util'
 

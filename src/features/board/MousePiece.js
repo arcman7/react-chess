@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react'
-
 import { ChessPiece } from '../game/ChessPiece'
 
 export const MousePiece = ({ selected, playerColors }) => {
@@ -7,6 +6,7 @@ export const MousePiece = ({ selected, playerColors }) => {
   const [renderedPiece, setRenderedPiece] = useState(null)
   const [x, setX] = useState(0)
   const [y, setY] = useState(0)
+
   const mouseMoveCb = (e) => {
     setX(e.pageX)
     setY(e.pageY)
@@ -29,7 +29,7 @@ export const MousePiece = ({ selected, playerColors }) => {
       setDisplay('none')
       setRenderedPiece(null)
     }
-  }, [selected])
+  }, [selected.piece, playerColors.color1, playerColors.color2])
   
   const anchor = (
     <div
