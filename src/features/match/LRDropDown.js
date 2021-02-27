@@ -70,7 +70,7 @@ export const LRDropDown = ({ listItems, title, selectCB, selectMultiple  = false
       // console.log('WINDOW click here 0')
       const par = document.getElementById(id)
       if(!par) { return }
-      if (par.contains(e.target)) {
+      if (e.target !== window && par.contains(e.target)) {
         console.log('WINDOW click - setting true for ', id)
         // if (isOpen && isFocused) {
         //   setIsOpen(false)
