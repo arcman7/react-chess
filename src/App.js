@@ -6,8 +6,12 @@ import {
   Redirect,
 } from 'react-router-dom'
 
+
+
 import { Board } from './features/board/Board'
 import { Navbar } from './app/Navbar'
+import { Facebook } from './features/users/facebook/App'
+import { FacebookLogin } from './features/users/FacebookLogin'
 
 function App() {
   return (
@@ -17,10 +21,15 @@ function App() {
         <Switch>
           <Route
             exact
+            path="/test"
+            component={FacebookLogin}
+          />
+          <Route
+            exact
             path="/game"
             component={Board}
           />
-          <Redirect to="/game" />
+          <Redirect to="/test" />
         </Switch>
       </div>
     </Router>

@@ -86,6 +86,7 @@ export const Board = () => {
               dispatch(pieceSelected(piece))
               dispatch(displayMovePattern(positions))
             }
+            // window.dispatchEvent(new Event('click'))
           }}
           onMouseUp={() => {
             dispatch(pieceMoveRequest({ row, col }))

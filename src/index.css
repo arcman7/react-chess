@@ -15,6 +15,9 @@ body {
   width: 100%;
   height: 100%;
   border: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .chess-piece {
@@ -24,3 +27,53 @@ body {
 .selected {
   cursor: grabbing !important;
 }
+
+.facebook-login:hover {
+  opacity: 0.75;
+}
+
+.nav-content {
+  display: grid;
+  grid-template-areas:
+    'game game game login'
+    'game game game user-info'
+    'game game game user-info';
+  grid-gap: 10px;
+}
+.game {
+  grid-area: game;
+}
+.login {
+  grid-area: login
+}
+.user-info {
+  display: grid;
+  background-color: #85b4ff;
+  grid-area: user-info;
+}
+
+.profile-info {
+  display: grid;
+  grid-template-areas:
+    'pic pic name'
+    'pic pic username';
+  grid-gap: 10px;
+}
+
+.pic {
+  grid-area: pic;
+  padding: 10px;
+}
+.name {
+  grid-area: name;
+  padding: 10px;
+}
+.username {
+  grid-area: username;
+  padding: 10px;
+}
+
+.create-game {
+  width: 300px;
+}
+
